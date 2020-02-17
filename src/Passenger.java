@@ -16,15 +16,17 @@ public class Passenger extends Thread {
         try {
             semaphore.acquire();
             System.out.println("Пассажир" + id + "Покупает билет");
-            sleep(1000);
+            sleep(10);
 
 
             System.out.println("Пассажир" + id + "Купил билет");
             semaphore.release();
 
-            System.out.println("Пассажир " + id + " Cул в автобус");
+            System.out.println("Пассажир " + id + " Cел в автобус");
             cdl.countDown();
             cdl.await();
+
+
 
 
 
